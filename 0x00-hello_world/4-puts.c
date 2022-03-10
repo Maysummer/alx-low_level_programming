@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * hello_puts - Printing a string using puts and betty style and documentation
+ * main - Beginning of the function in betty style and documentation
+ *
+ * Return: End of function
  */
 int main(void)
 {
