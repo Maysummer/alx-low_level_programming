@@ -6,9 +6,15 @@
  */
 int main(void)
 {
-	for (int ch = "a"; ch <= "z"; ch++)
+	int ch;
+
+	clrscr();
+	
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(tolower(ch));
+		putchar(ch);
+		putchar ('\n');
+		getch();
 	}
 	return (0);
 }
