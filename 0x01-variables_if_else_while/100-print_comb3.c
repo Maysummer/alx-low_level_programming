@@ -1,8 +1,10 @@
 #include <stdio.h>
+
 /**
- * main - Beginning of the function in betty style and documentation
+ * main - Prints all possible combinations of two different digits,
+ *        in ascending order, separated by a comma followed by a space.
  *
- * Return: End of function
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -17,7 +19,7 @@ int main(void)
 
 			if (digit1 == 8 && digit2 == 9)
 				continue;
-
+			
 			putchar(',');
 			putchar(' ');
 		}
@@ -27,26 +29,3 @@ int main(void)
 
 	return (0);
 }
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
--- INSERT --                                                  2,1           All
-
