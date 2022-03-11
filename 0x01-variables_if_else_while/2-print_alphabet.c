@@ -6,15 +6,12 @@
  */
 int main(void)
 {
-	int ch;
-
-	clrscr();
+	char ch;
 	
 	for (ch = 'a'; ch <= 'z'; ch++)
 	{
 		putchar(ch);
-		putchar ('\n');
-		getch();
 	}
+	putchar('\n')
 	return (0);
 }
