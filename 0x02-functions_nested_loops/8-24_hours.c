@@ -1,8 +1,6 @@
 #include "main.h"
 /**
  * jack_bauer - print every minute
- * @n: number to be computed
- * Return: Always 0 (success)
  */
 void jack_bauer(void)
 {
