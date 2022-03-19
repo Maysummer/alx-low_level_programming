@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * draw a straight line in the terminal.
+ * print_line - draw a straight line in the terminal.
  * @n: number of times '_' should be printed.
  */
 void print_line(int n)
