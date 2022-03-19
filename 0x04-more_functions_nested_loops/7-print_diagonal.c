@@ -1,16 +1,20 @@
 #include "main.h"
 /**
  * print_diagonal - draw a diagonal line.
- * n@: number of times '\' should print
+ * @n: number of times '\' should print
  */
 void print_diagonal(int n)
 {
 	int i;
 
-	if (n > 0)
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+	else
 	{
 
-		for (i = 0; i <= n; n++)
+		for (i = 0; i < n; n++)
 		{
 			int space;
 
@@ -22,5 +26,4 @@ void print_diagonal(int n)
 			_putchar('\n');
 		}
 	}
-	_putchar('\n');
 }
