@@ -9,7 +9,10 @@ chat *string_toupper(char *s)
 {
 	while (*s++)
 	{
-		*s - 32;
+		if (*s >= 65 && *s <= 122)
+		{
+			*s - 32;
+		}
 	}
 	return *s;
 }
