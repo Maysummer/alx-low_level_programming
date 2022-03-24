@@ -13,7 +13,7 @@ char *rot13(char *s)
 	char *b = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	i = 0;
-	
+
 	while (s[i] != '\0')
 	{
 		for (j = 0; j <= 52; j++)
