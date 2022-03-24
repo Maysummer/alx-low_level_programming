@@ -3,7 +3,7 @@
 /**
  * leet - encode a string
  * @s: string
- * Retunr: string
+ * Return: string
  */
 char *leet(char *s)
 {
@@ -16,7 +16,7 @@ char *leet(char *s)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			if (s[i] =  a[j])
+			if (s[i] ==  a[j])
 			{
 				s[i] = b[j];
 			}
