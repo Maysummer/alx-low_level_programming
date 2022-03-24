@@ -7,12 +7,14 @@
  */
 chat *string_toupper(char *s)
 {
-	while (*s++)
+	int i = 0;
+
+	while (s[i] != '\0')
 	{
-		if (*s >= 65 && *s <= 122)
+		if (s[i] >= 65 && s[i] <= 122)
 		{
-			*s - 32;
+			s[i] = s[i] - 32;
 		}
 	}
-	return *s;
+	return (s);
 }
