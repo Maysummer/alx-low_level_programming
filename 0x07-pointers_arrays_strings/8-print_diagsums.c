@@ -20,6 +20,7 @@ void print_diagsums(int *a, int size)
 			{
 				sum2 += *a;
 			}
+			a++;
 		}
 	}
 	printf("%d, %d", sum1, sum1);
