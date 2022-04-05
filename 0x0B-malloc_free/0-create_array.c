@@ -3,8 +3,8 @@
 /**
  * create_array - creates an array of chars and
  * initializes it with a specific char.
- * @int: size
- * @s: character
+ * @size: size
+ * @c: character
  * Return: Always success (0)
  */
 char *create_array(unsigned int size, char c)
