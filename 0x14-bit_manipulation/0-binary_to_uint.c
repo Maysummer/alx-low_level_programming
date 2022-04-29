@@ -13,24 +13,25 @@ unsigned int binary_to_uint(const char *b)
 	int lastIndex;
 	unsigned int sum = 0;
 
-	while (*b != '\0')
+	if (b == NULL)
+		return (0);
+
+	while (b[len] != '\0')
+
 		len++;
 
 	lastIndex = len - 1;
 
-	if (b == NULL)
-		return (0);
-
 	while (i < len)
 	{
-		if (b[i] != '0' || b[i] != '1')
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
 		i++;
 	}
-
+	i = 0;
 	while (i < len)
 	{
-		sum += b[i] << lastIndex;
+		sum += (b[i] - '0') << lastIndex;
 		i++;
 		lastIndex--;
 	}
