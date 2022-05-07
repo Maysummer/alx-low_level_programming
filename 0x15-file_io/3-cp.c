@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-
+	write(fdw, buf, strlen(buf));
 	fdc = close(fd);
 	fdwc = close(fdw);
 	if (fdc == -1 || fdwc == -1)
