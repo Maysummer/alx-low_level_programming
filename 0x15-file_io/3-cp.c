@@ -12,7 +12,7 @@
 int main(int argc, char **argv)
 {
 	int fd, fdw, fdc, fdr, fdwc;
-	char *buf;
+	char *buf = malloc(sizeof(char) * 1024);
 
 	if (argc != 3)
 	{
@@ -25,22 +25,21 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	buf = malloc(sizeof(char) * 1024);
 	if (buf == NULL)
 		return (-1);
-	while (1)
-	{
-		fdr = read(fd, buf, 1024);
-		if (fdr == 0)
-			break;
-	}
 	fdw = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fdw == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	write(fdw, buf, strlen(buf));
+	while (1)
+	{
+		fdr = read(fd, buf, 1024);
+		write(fdw, buf, fdr);
+		if (fdr == 0)
+			break;
+	}
 	fdc = close(fd);
 	fdwc = close(fdw);
 	if (fdc == -1 || fdwc == -1)
