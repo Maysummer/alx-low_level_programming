@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 	while (1)
 	{
 		fdr = read(fd, buf, 1024);
-		if (fdr = 0)
+		if (fdr == 0)
 			break;
 	}
 	fdw = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
