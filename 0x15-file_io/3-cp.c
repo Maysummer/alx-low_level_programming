@@ -11,7 +11,7 @@
 
 int main(int argc, char **argv)
 {
-	int fd, fdw, fdc, fdwc;
+	int fd, fdw, fdc, fdr, fdwc;
 	char *buf;
 
 	if (argc != 3)
@@ -19,20 +19,21 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-
 	buf = malloc(sizeof(char) * 1024);
 	if (buf == NULL)
 		return (-1);
-
-	read(fd, buf, 1024);
-
+	while (1)
+	{
+		fdr = read(fd, buf, 1024);
+		if (fdr = 0)
+			break;
+	}
 	fdw = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fdw == -1)
 	{
