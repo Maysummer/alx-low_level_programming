@@ -13,15 +13,15 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	h_table = malloc(sizeof(hash_table_t));
 	if (!h_table)
-		return NULL;
+		return (NULL);
 
 	h_table->size = size;
 	arr = malloc(sizeof(hash_node_t *) * size);
-	
+
 	if (!arr)
 	{
 		free(h_table);
-		return NULL;
+		return (NULL);
 	}
 
 	while (i < size)
@@ -31,5 +31,5 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 	h_table->array = arr;
 
-	return(h_table);
+	return (h_table);
 }
