@@ -13,14 +13,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 
 	new_elem = malloc(sizeof(hash_node_t));
-        if (!new_elem)
-                return (0);
+	if (!new_elem)
+		return (0);
 
-	if (!ht || !key || !value || strcmp(key, ""))
+	if (!ht || !key || !value || !strcmp(key, ""))
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-        index_list = ht->array[index];
+	index_list = ht->array[index];
 
 	while (index_list)
 	{
