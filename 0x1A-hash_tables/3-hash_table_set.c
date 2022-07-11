@@ -26,7 +26,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(index_list->key, key) == 0)
 		{
-			index_list->value = strdup(value)
+			index_list->value = strdup(value);
 		}
 		index_list = index_list->next;
 	}
