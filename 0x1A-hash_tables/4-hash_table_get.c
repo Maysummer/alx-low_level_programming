@@ -14,12 +14,14 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (!ht || !key)
 		return (NULL);
 
-	index  = key_index((const unsigned char *)key, ht-> size);
+	index  = key_index((const unsigned char *)key, ht->size);
 	index_list = ht->array[index];
 
-	if (index_list)
+	while (index_list)
 	{
-		return (index_list->value);
+		if (index_list->key == key)
+			return (index_list->value);
+		index_list = index_list->next;
 	}
 	return (NULL);
 }
