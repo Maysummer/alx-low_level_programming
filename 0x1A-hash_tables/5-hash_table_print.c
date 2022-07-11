@@ -6,13 +6,13 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i, size;
-	hash_node_t *index_list;
+	hash_node_t *index_list = NULL;
 	int place_comma = 0;
-
-	size = ht->size;
 
 	if (!ht)
 		return;
+
+	size = ht->size;
 
 	printf("{");
 	for (i = 0; i < size; i++)
