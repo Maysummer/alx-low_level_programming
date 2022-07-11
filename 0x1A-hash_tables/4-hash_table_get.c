@@ -19,7 +19,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	while (index_list)
 	{
-		if (index_list->key == key)
+		if (!strcmp(index_list->key, key))
 			return (index_list->value);
 		index_list = index_list->next;
 	}
