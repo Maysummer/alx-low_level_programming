@@ -1,5 +1,5 @@
 CC := gcc
-SRCS := *.c
+SRCS := $(wildcard *.c)
 
 all: school
 school:
