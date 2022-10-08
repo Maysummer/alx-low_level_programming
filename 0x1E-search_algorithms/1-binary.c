@@ -10,7 +10,7 @@ void arr_pr(int *arr, size_t lo, size_t hi)
 {
 	size_t i;
 
-	printf("Searching in aray: ");
+	printf("Searching in array: ");
 	for (i = lo; i <= hi; i++)
 	{
 		printf("%d", arr[i]);
@@ -42,7 +42,7 @@ int bi_search(size_t lo, size_t hi, int *arr, int val)
 		return (bi_search(mid + 1, hi, arr, val));
 	if (arr[mid] > val)
 		return (bi_search(lo, mid - 1, arr, val));
-	return(-1);
+	return (-1);
 }
 
 /**
