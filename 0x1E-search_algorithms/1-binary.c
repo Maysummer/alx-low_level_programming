@@ -15,7 +15,7 @@ void arr_pr(int *arr, size_t lo, size_t hi)
 	{
 		printf("%d", arr[i]);
 		if (i < hi)
-			printf(",");
+			printf(", ");
 	}
 	printf("\n");
 }
